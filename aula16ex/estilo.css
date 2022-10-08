@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(4, 142, 248);
+    font: normal  15pt Arial;
+ 
+}
+
+header{
+    color: white;
+    text-align: center; /* centralizar o texto*/
+}
+
+section{
+    background-color: white;
+    border-radius: 10px; /* bodas da div arredondadas*/
+    padding: 15px; /* comprimento da div */
+    width: 500px; /* largura da div */
+    margin: auto; /* margens da div centralizar na pagina por exemplo */
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.366); /*sombra na caixa com 5px de deslocamento lateral  5px de deslocamento vertical, 10px de espalhamento e cor preto*/
+}
+select#numadd {
+    width : 180px;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

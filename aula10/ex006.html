@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt arial;
+            background: green;
+            color:white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body> 
+    <div id ='area'>
+        interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar) //da para fazer desta maneira ou na que esta descrito no comentario da linha27 que se insere na linha 21
+        a.addEventListener('mouseenter', entrar) //onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"
+        a.addEventListener('mouseout', sair)
+        function clicar(){
+            a.innerText = 'cliclou!'
+            a.style.background = 'black'
+        }
+        //quando eu clicar na div (linha 21) vai criar uma var (linha 25)
+        //depois muda o objecto vai mudar o conteudo para cliclou (linha 27)
+        function entrar(){
+            a.innerText = 'entrou'
+        }
+        function sair(){
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

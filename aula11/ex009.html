@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body{
+            background-color: rgb(106, 166, 108);
+        }
+        div{
+            font : normal 15pt arial;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>pais de origem</h1>
+    Qual é o teu pais de origem ?
+    <input type="text"  name=" pais" id="txt1">
+    <input type="button" value="verificar" onclick="validar()">
+    <div id="res">
+
+    </div>
+    <script>
+        //var tx1= window.document.getElementById('txt1')
+        function validar(){
+            var tx1= window.document.getElementById('txt1')
+            var res = window.document.getElementById('res')
+            var txtt = tx1.value 
+            res.innerHTML = `<p> <strong> O teu pais é ${txtt} </strong></p> `
+            if(txtt == 'portugal'){
+                res.innerHTML += `<p> És portugues </p>`
+            }else {
+                res.innerHTML += `<p> És estrangeiro </p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
