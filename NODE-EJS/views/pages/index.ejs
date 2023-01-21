@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+    <%- include ('../partials/head'); %><!-- comando ejs para incluir os outros aquivos ou ficheiros  -->
+    
+    <body class="container">
+         <%- include ('../partials/header'); %>
+        <main>
+            <div class="h-100 p-5 bg-light rounded-3 ">
+                <h1>Node com EJS</h1>
+                <p>Aprender a trabalhar com EJS</p>
+                <p><%= subtitle%></p><!--  o igual serve para mostrar o subtitle ou outra coisa qualquel na tela -->
+            </div>
+            <ul>
+                <% qualitys.forEach(function(quality){ %>
+                 <li>
+                    <strong><%= quality.title %></strong><%= quality.message %>
+                </li>   
+                <% }) %>
+                
+                
+            </ul>
+        </main>
+        <%- include ('../partials/footer'); %>
+    </body>
+</html>
+
